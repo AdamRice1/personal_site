@@ -1,0 +1,96 @@
+<div id='wrapper'>
+<div class="row">
+<div id='main'>
+<div class="rain front-row"></div>
+  <div class="rain back-row"></div>
+    <div class='col-4' id='heading'>
+        <h1>Hello, I am Adam Rice.</h1><br>
+        <h2>I am a full-stack web developer</h2>
+    </div>
+    </div>   
+    </div> 
+    </div>
+    <div class='container'>
+        <div id='row_1' class='row'>
+        <div class='col-md-12'>
+                <div id='middle'>
+                <h1>ABOUT</h1>
+                </div>
+                <div id='middle_2'>
+                <p>I am a recent bootcamp graduate seeking a full time developer role. I enjoy back end development and am highly effective at optimizing user experiences and improving site functionality by utilizing abilities in Python, the MEAN stack, and Ruby on Rails. My past roles in marketing have give me a resourceful, analytical, and detail-oriented mindset.</p>
+                </div>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='col-md-12'>
+                
+            </div>
+            <div class='col-md-12'>
+            
+                <div id="graph" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+            
+            </div>
+        </div>
+        <div id="projects" class='row'>
+            <div id='middle'>
+                <h1>Projects</h1>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='col-md-4'>
+            </div>
+            <div class='col-md-4'>
+                <ul id='mids' class="list-group list-group-horizontal-md list">
+                    <a href='http://18.220.245.204/'><li class="list-group-item one"><%= image_tag("python.png", :alt => "python") %></li></a>
+                    <a href='http://52.14.173.72/home'><li class="list-group-item one"><%= image_tag("ruby.png", :alt => "ruby") %></li></a>
+                    <a href='http://18.189.2.157/home'><li class="list-group-item one"><%= image_tag("angular.png", :alt => "angular") %></li></a>
+                </ul>
+            </div>
+        </div>
+        </div>
+        <div class='row'>
+        <div class='col-md-4'>
+        </div>
+        <div id='contact' class='col-md-4'>
+        <form action='/message' method='post'>
+        <h2>Contact Me</h2>
+        <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+            <div class="form-group">
+            <label for="exampleInputEmail1">Name:</label>
+            <input name='message[name]' type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Name">
+            </div>
+            <div class="form-group">
+            <label for="exampleInputEmail1">Email:</label>
+            <input name='message[email]' type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+            </div>
+            <div class="form-group">
+            <label for="exampleFormControlTextarea1">Your Message</label>
+            <textarea name='message[message]' class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+      </div>
+      <div class='col-md-4'>
+            <% if flash[:alert] %>
+            <% flash[:alert].each do |error| %>
+        <div id='errors'><p><%= error %></p></div>
+        <% end %>
+        <% end %>
+      </div>
+        </div>
+        </div>
+        <div id='footer'>
+        <div class='row'>
+            <div class='col-md-4'>
+            </div>
+            <div id='center' class='col-md-4'>
+                
+                   <a href='https://www.linkedin.com/in/adam-rice123/'><%= image_tag('link.png', :id => "small") %></a>
+                <p id='name'>|  <a id='white' href='mailto:adamdanielrice1@gmail.com?' target="_top">adamdanielrice1@gmail.com</a></p>
+                
+            </div>
+            <div class='col-md-4'></div>
+           
+            </div>
+        </div>
+    </div>
